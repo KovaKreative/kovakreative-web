@@ -6,8 +6,10 @@ import Tagline from "./Tagline";
 export default function Hero() {
   return (
     <div className='Hero'>
-      <Tagline />
-      <Social />
+      <div className='container'>
+        <Tagline />
+        <Social />
+      </div>
     </div>
   );
 }
