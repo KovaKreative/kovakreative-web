@@ -1,3 +1,5 @@
+import './Hero.scss';
+
 import Social from "./Social";
 import Tagline from "./Tagline";
 
