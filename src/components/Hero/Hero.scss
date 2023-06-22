@@ -8,20 +8,22 @@
   background: linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#11143dbb', endColorstr='#2c2072bb', GradientType=1);
   border-radius: 0.1em 1.5em;
-  padding: 0.5em 0.5em;
+  padding: 0.7em 0.7em;
 
-  .container {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
+  .bordered {
     border-radius: 0.1em;
     border-style: solid;
     border-width: 24px;
     border-image-source: url('../../assets/frame.svg');
     border-image-slice: 25%;
     border-image-repeat:stretch;
-    // border-image-outset: 32px;
-    padding: 2em 2em;
+  }
+
+  .container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 1em 1em;
   }
 
   .Tagline {
@@ -37,5 +39,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.2em;
+    }
+
+    .social-icon {
+      height: 1.2em;
+    }
+
+  }
+}
+.social-item:hover {
+  img {
+    filter:brightness(200%) saturate(150%) hue-rotate(-40deg);
   }
 }

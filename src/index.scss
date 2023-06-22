@@ -20,6 +20,24 @@ li {
   list-style-type: none;
 }
 
-h1, h2, h3, h4, h5 {
-  margin: 0px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0%;
+}
+
+ul {
+  margin: 0%;
+  padding: 0%;
+}
+
+a {
+  color: #b94fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: adjust-color($color: #b94fff, $hue: -30%, $lightness: 20%, $saturation: 50%);
 }
