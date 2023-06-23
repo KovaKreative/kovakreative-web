@@ -53,15 +53,19 @@
       font-size: x-large;
     }
   }
+
   .Tagline {
     text-align: center;
+
     .highlight {
       font-size: xx-large;
     }
   }
+
   .container {
     padding: 0;
     flex-direction: column;
+
     .Social {
       flex-direction: row;
     }

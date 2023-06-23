@@ -1,10 +1,32 @@
+@use 'variables.scss' as v;
+
+@font-face {
+  font-family: "Orbitron";
+  src: url('./assets/OrbitronMedium.ttf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Orbitron";
+  src: url('./assets/OrbitronBold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Prototype";
+  src: url('./assets/Prototype.ttf');
+}
+@font-face {
+  font-family: "Xolonium";
+  src: url('./assets/XoloniumRegular.otf');
+}
+
+
 body {
   margin: 0;
   background-image: url('./assets/kova-web-bkg.svg');
   width: 100vw;
   height: 100vh;
-  color: #ffdb87;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  color: v.$yellow-1;
+  font-family: 'Xolonium', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -34,10 +56,10 @@ ul {
 }
 
 a {
-  color: #b94fff;
+  color: v.$violet-1;
   text-decoration: none;
 }
 
 a:hover {
-  color: adjust-color($color: #b94fff, $hue: -30%, $lightness: 20%, $saturation: 50%);
+  color: adjust-color($color: v.$violet-1, $hue: -30%, $lightness: 20%, $saturation: 50%);
 }

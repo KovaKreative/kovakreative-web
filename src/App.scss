@@ -1,3 +1,5 @@
+@use './variables.scss' as v;
+
 .App {
   padding: 1em;
   max-width: max(1024px, 60vw);
@@ -16,7 +18,7 @@
 }
 
 .highlight {
-  color: rgb(185, 79, 255);
+  color: v.$violet-1;
 }
 
 @media (min-width: 1921px) {
