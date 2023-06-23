@@ -1,5 +1,8 @@
 .App {
   padding: 1em;
+  max-width: max(1024px, 60vw);
+  margin: auto;
+  font-size: 18px;
 }
 
 .bordered {
@@ -16,9 +19,16 @@
   color: rgb(185, 79, 255);
 }
 
-@media (max-width: 780px) {
+@media (min-width: 1921px) {
+  .App {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 960px) {
   .App {
     padding: 0.5em;
+    font-size: 14px;
   }
 
   .bordered {
