@@ -1,3 +1,37 @@
 .App {
+  padding: 1em;
 }
 
+.bordered {
+  border-radius: 0.1em;
+  border-style: solid;
+  border-width: 24px;
+  border-image-source: url('./assets/frame.svg');
+  border-image-slice: 25%;
+  border-image-repeat: stretch;
+
+}
+
+.highlight {
+  color: rgb(185, 79, 255);
+}
+
+@media (max-width: 780px) {
+  .App {
+    padding: 0.5em;
+  }
+
+  .bordered {
+    border: none;
+  }
+
+  .md {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .sm {
+    display: none;
+  }
+}

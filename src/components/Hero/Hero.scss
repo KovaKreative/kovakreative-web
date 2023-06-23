@@ -1,6 +1,4 @@
 .Hero {
-
-  margin: 1em;
   min-height: 10em;
   background: #11143dbb;
   background: -moz-linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
@@ -9,15 +7,6 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#11143dbb', endColorstr='#2c2072bb', GradientType=1);
   border-radius: 0.1em 1.5em;
   padding: 0.7em 0.7em;
-
-  .bordered {
-    border-radius: 0.1em;
-    border-style: solid;
-    border-width: 24px;
-    border-image-source: url('../../assets/frame.svg');
-    border-image-slice: 25%;
-    border-image-repeat:stretch;
-  }
 
   .container {
     display: flex;
@@ -28,10 +17,6 @@
 
   .Tagline {
     flex: 2;
-
-    .highlight {
-      color: rgb(185, 79, 255);
-    }
   }
 
   .Social {
@@ -39,6 +24,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin: 1em;
 
     a {
       display: flex;
@@ -52,8 +38,32 @@
 
   }
 }
+
 .social-item:hover {
   img {
-    filter:brightness(200%) saturate(150%) hue-rotate(-40deg);
+    filter: brightness(200%) saturate(150%) hue-rotate(-40deg);
   }
+}
+
+@media (max-width: 780px) {
+  .Hero {
+    padding: 0px;
+
+    h1 {
+      font-size: x-large;
+    }
+  }
+  .Tagline {
+    .highlight {
+      font-size: xx-large;
+    }
+  }
+  .container {
+    padding: 0;
+    flex-direction: column;
+    .Social {
+      flex-direction: row;
+    }
+  }
+
 }
