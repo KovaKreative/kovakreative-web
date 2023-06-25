@@ -7,6 +7,16 @@
   font-size: 18px;
 }
 
+.section-title {
+  padding: 0.5em;
+  border-radius: 0% 1em;
+  background: #11143dbb;
+  background: -moz-linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
+  background: -webkit-linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
+  background: linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#11143dbb', endColorstr='#2c2072bb', GradientType=1);
+}
+
 .bordered {
   border-radius: 0.1em;
   border-style: solid;

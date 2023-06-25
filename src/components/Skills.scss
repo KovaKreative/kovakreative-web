@@ -1,3 +1,17 @@
 .Skills {
-  margin: 1em;
+  margin: 2em 0%;
+  text-align: center;
+}
+
+.skill-section {
+  display: flex;
+  justify-content: space-around;
+
+  h3 {
+    margin: 1em 0%;
+  }
+
+  li {
+    margin: 1em;
+  }
 }
