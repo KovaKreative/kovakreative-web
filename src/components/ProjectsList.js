@@ -16,7 +16,10 @@ export default function ProjectsList() {
         <h3>{p.title}</h3>
         <p>{p.description}</p>
         <img src={p.screenshot} />
-        <Button large={true} onClick={() => navigate(p.url)} label="More..." />
+        {p.url ? <Button large={true} onClick={() => {
+          navigate(p.url);
+          window.scrollTo(0, 0);
+        }} label="More..." /> : <footer>Details coming soon...</footer>}
       </div>
     );
   });
@@ -24,7 +27,7 @@ export default function ProjectsList() {
 
   return (
     <section className="ProjectList">
-      <h1 className='section-title'>Adventures in Web Development</h1>
+      <h1 className='section-title' id='projects'>Adventures in Web Development</h1>
       <div className='project-container'>{projectCards}</div>
     </section>
   );

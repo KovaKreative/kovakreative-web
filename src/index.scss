@@ -22,11 +22,10 @@
   src: url('./assets/XoloniumRegular.otf');
 }
 
-
 body {
   margin: 0;
   background-image: url('./assets/kova-web-bkg.svg');
-  width: 100vw;
+  width: calc(100vw - 2em);
   height: 100vh;
   color: v.$yellow-1;
   font-family: 'Xolonium', 'Segoe UI', 'Roboto', 'Oxygen',
@@ -34,6 +33,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 1em;
+  max-width: max(1024px, 60vw);
+  margin: auto;
+  font-size: 18px;
+
 }
 
 code {

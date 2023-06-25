@@ -1,10 +1,6 @@
 @use './variables.scss' as v;
 
 .App {
-  padding: 1em;
-  max-width: max(1024px, 60vw);
-  margin: auto;
-  font-size: 18px;
 }
 
 .section-title {
@@ -29,6 +25,10 @@
 
 .highlight {
   color: v.$violet-1;
+}
+
+.centered {
+  text-align: center;
 }
 
 @media (min-width: 1921px) {

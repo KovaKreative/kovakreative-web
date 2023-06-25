@@ -1,0 +1,90 @@
+@use '../../variables.scss' as v;
+
+.project {
+  h1 {
+    text-align: center;
+    margin: rem;
+  }
+}
+
+.tech-stack {
+  ul {
+    margin: 1em;
+    display: flex;
+    gap: 1em 3em;
+    flex-wrap: wrap;
+  }
+
+  li {
+    min-width: 15%;
+  }
+}
+
+.project-content {
+
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  h4 {
+    margin-top: 2em;
+  }
+
+  p {
+    white-space: pre-wrap;
+  }
+}
+
+h4.caption {
+  margin: 0%;
+  text-align: center;
+}
+
+@media (min-width: 1921px) {
+  .video {
+    width: 1920px;
+    height: 1080px;
+  }
+}
+
+@media (min-width: 481px) {
+  .video {
+    width: 320px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 641px) {
+  .video {
+    width: 480px;
+    height: 270px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .video {
+    width: 640px;
+    height: 360px;
+  }
+}
+
+.Image {
+
+  padding: 0.5em;
+  background-color: black;
+  border: 1px solid v.$yellow-2;
+  
+  img {
+    max-width: 100%;
+  }
+}
+
+footer {
+  margin: 1em;
+  font-size: 32px;
+  text-align: center;
+}
