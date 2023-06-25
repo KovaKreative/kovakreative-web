@@ -1,3 +1,19 @@
 .ProjectList {
   margin: 1em;
 }
+
+.project-container {
+  display: flex;
+  justify-content: space-around;
+  width: 512px;
+  margin: auto;
+}
+
+.project-card {
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+
+}

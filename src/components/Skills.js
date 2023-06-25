@@ -7,7 +7,7 @@ export default function Skills() {
       <h1 className='section-title'>What I Can Do</h1>
       <div className='skill-section'>
         <ul>
-          <h3>Languages</h3>
+          <h3 className='sm'>Languages</h3>
           <li>HTML5</li>
           <li>CSS3</li>
           <li>JavaScript</li>
@@ -18,7 +18,7 @@ export default function Skills() {
           <li>Sass</li>
         </ul>
         <ul>
-          <h3>Libraries/Frameworks</h3>
+          <h3 className='sm'>Libraries/Frameworks</h3>
           <li>Node</li>
           <li>React</li>
           <li>Vue</li>
@@ -31,7 +31,7 @@ export default function Skills() {
           <li>WebSockets</li>
         </ul>
         <ul>
-          <h3>Other</h3>
+          <h3 className='sm'>Other</h3>
           <li>MySQL</li>
           <li>PostreSQL</li>
           <li>Prisma</li>

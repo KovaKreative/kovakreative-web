@@ -5,15 +5,18 @@
   src: url('./assets/OrbitronMedium.ttf');
   font-weight: normal;
 }
+
 @font-face {
   font-family: "Orbitron";
   src: url('./assets/OrbitronBold.ttf');
   font-weight: bold;
 }
+
 @font-face {
   font-family: "Prototype";
   src: url('./assets/Prototype.ttf');
 }
+
 @font-face {
   font-family: "Xolonium";
   src: url('./assets/XoloniumRegular.otf');
@@ -58,6 +61,14 @@ ul {
 a {
   color: v.$violet-1;
   text-decoration: none;
+}
+
+button {
+  font-family: 'Xolonium', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a:hover {

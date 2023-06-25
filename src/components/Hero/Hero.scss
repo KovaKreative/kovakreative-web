@@ -24,7 +24,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 1em;
 
     a {
       display: flex;
@@ -45,9 +44,8 @@
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .Hero {
-    padding: 0px;
 
     h1 {
       font-size: x-large;
@@ -68,6 +66,7 @@
 
     .Social {
       flex-direction: row;
+      margin-top: 1em;
     }
   }
 

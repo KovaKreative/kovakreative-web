@@ -10,6 +10,7 @@
 .section-title {
   padding: 0.5em;
   border-radius: 0% 1em;
+  text-align: center;
   background: #11143dbb;
   background: -moz-linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
   background: -webkit-linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
@@ -24,7 +25,6 @@
   border-image-source: url('./assets/frame.svg');
   border-image-slice: 25%;
   border-image-repeat: stretch;
-
 }
 
 .highlight {
@@ -37,22 +37,21 @@
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .App {
     padding: 0.5em;
-    font-size: 14px;
   }
-
-  .bordered {
-    border: none;
-  }
-
   .md {
     display: none;
   }
 }
 
 @media (max-width: 480px) {
+
+  .bordered {
+    border: none;
+  }
+
   .sm {
     display: none;
   }
