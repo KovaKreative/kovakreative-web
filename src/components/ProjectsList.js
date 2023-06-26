@@ -19,7 +19,7 @@ export default function ProjectsList() {
         {p.url ? <Button large={true} onClick={() => {
           navigate(p.url);
           window.scrollTo(0, 0);
-        }} label="More..." /> : <footer>Details coming soon...</footer>}
+        }} label="Read More" /> : <footer>Details coming soon...</footer>}
       </div>
     );
   });

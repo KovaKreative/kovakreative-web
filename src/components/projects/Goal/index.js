@@ -16,8 +16,8 @@ export default function Goal() {
       <ProjectContent projectContent={projectContent} />
       <footer>
         <Button label='Home' large={true} onClick={() => {
-          navigate('/#projects');
-          // window.scrollTo(0, 0); 
+          navigate('/');
+          window.scrollTo(0, 0);
         }}/>
       </footer>
     </main>
