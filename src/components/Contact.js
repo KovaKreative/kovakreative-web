@@ -27,19 +27,6 @@ export default function Contact() {
           console.log(err);
           setSubmit('Something went wrong. Please try again later.');
         });
-
-      // fetch(`mailto:eric@kovakreative.com?name=${contactForm.name}&email=${contactForm.email}&message=${contactForm.message}&kode=${contactForm.kode}`, requestOptions)
-      //   .then(res => {
-      //     console.log(res.ok);
-      //     if(!res.ok) {
-      //       return setSubmit('Something went wrong. Please try again later.');
-      //     }
-      //     setSubmit('Thank you so much for reaching out!\nI will get back to you as soon as possible!');
-      //   })
-      //   .catch(err => {
-      //     console.log(err);
-      //     setSubmit('Something went wrong. Please try again later.');
-      //   });
     }
   };
 
