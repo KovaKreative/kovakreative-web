@@ -15,7 +15,7 @@ export default function ProjectsList() {
       <div className='project-card bordered' key={i}>
         <h3>{p.title}</h3>
         <p>{p.description}</p>
-        <img src={p.screenshot} />
+        <img src={p.screenshot} alt={p.title} />
         {p.url ? <Button large={true} onClick={() => {
           navigate(p.url);
           window.scrollTo(0, 0);
@@ -27,7 +27,7 @@ export default function ProjectsList() {
 
   return (
     <section className="ProjectList">
-      <h1 className='section-title' id='projects'>Adventures in Web Development</h1>
+      <h1 className='section-title' id='projects'>Projects</h1>
       <div className='project-container'>{projectCards}</div>
     </section>
   );
