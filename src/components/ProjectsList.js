@@ -24,7 +24,6 @@ export default function ProjectsList() {
     );
   });
 
-
   return (
     <section className="ProjectList">
       <h1 className='section-title' id='projects'>Projects</h1>
