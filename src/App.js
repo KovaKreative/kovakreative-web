@@ -2,19 +2,19 @@ import './App.scss';
 
 import Hero from './components/Hero';
 import About from './components/About';
+import Skills from './components/Skills';
 import ProjectsList from './components/ProjectsList';
 import Contact from './components/Contact';
-import Skills from './components/Skills';
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <Hero />
       <About />
       <Skills />
       <ProjectsList />
       <Contact />
-    </div>
+    </main>
   );
 }
 

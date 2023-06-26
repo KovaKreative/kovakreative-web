@@ -11,7 +11,7 @@ import { projectContent } from './goalContent';
 export default function Goal() {
   const navigate = useNavigate();
   return (
-    <div className='Goal project'>
+    <main className='Goal project'>
       <h1>GOAL</h1>
       <ProjectContent projectContent={projectContent} />
       <footer>
@@ -20,6 +20,6 @@ export default function Goal() {
           // window.scrollTo(0, 0); 
         }}/>
       </footer>
-    </div>
+    </main>
   );
 }
