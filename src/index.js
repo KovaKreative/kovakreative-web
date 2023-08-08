@@ -7,7 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import Project from './components/projects/Project';
 import Footer from './components/Footer';
 
-import { projectContent as goalContent } from './components/projects/Goal/goalContent';
+import { content as goalContent } from './components/projects/Goal/goalContent';
+import { content as openbookContent } from './components/projects/OpenBook/openbookContent';
 
 const router = createBrowserRouter([
   {
@@ -19,8 +20,8 @@ const router = createBrowserRouter([
     element: <Project title="GOAL" content={goalContent} />
   },
   {
-    path: "/goal",
-    element: <Project title="GOAL" content={goalContent} />
+    path: "/openbook",
+    element: <Project title="Open Book" content={openbookContent} />
   }
 ]);
 

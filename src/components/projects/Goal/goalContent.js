@@ -8,8 +8,8 @@ import landing from '../../../assets/goal/landingPage.png';
 
 export const techStack = ['React', 'Redux', 'Redux Toolkit', 'Axios', 'Sass', 'Node', 'Express', 'Socket.io', 'JSON Web Token', 'Prisma', 'PostreSQL'];
 
-export const projectContent = (
-  <div className='goal-content'>
+export const content = (
+  <div className='project-content'>
     <h3 className="section-title">Overview</h3>
     <div className='bordered'>
 

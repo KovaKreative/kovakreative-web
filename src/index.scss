@@ -80,3 +80,8 @@ button {
 a:hover {
   color: adjust-color($color: v.$violet-1, $hue: -30%, $lightness: 20%, $saturation: 50%);
 }
+
+hr {
+  border-color: #b94fff;
+  margin: 1em 10%;
+}
