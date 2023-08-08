@@ -1,4 +1,4 @@
-import TechStack from "./TechStack";
+import TechStack from "../TechStack";
 import Image from "../Image";
 
 import goalManager from '../../../assets/goal/goalManager.png';

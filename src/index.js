@@ -4,8 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Goal from './components/projects/Goal';
+import Project from './components/projects/Project';
 import Footer from './components/Footer';
+
+import { projectContent as goalContent } from './components/projects/Goal/goalContent';
 
 const router = createBrowserRouter([
   {
@@ -14,9 +16,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/goal",
-    element: <Goal />
+    element: <Project title="GOAL" content={goalContent} />
+  },
+  {
+    path: "/goal",
+    element: <Project title="GOAL" content={goalContent} />
   }
-])
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
