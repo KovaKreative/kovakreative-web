@@ -31,6 +31,17 @@
   text-align: center;
 }
 
+.image {
+
+  padding: 0.5em;
+  background-color: black;
+  border: 1px solid v.$yellow-2;
+
+  img {
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 1921px) {
   .App {
     font-size: 24px;

@@ -14,18 +14,16 @@ export const content = (
   <div className='project-content'>
     <h3 className="section-title">Overview</h3>
     <div className='bordered'>
-
-      <p>{`OpenBook is a creative writing app which allows users to create prose, poetry, or any other form of written art. What makes it unique is that it also allows users to contribute to each other’s written work, continuing or following up a written story.`}</p>
+      <p>{`OpenBook is a creative writing app which allows users to create prose, poetry, or any other form of written art. What makes it unique is that it also allows users to contribute to each other’s written work, continuing a written story.`}</p>
       <Image url={overview} alt='App Overview' caption='Browse Stories Page' />
-      <p>{`A user starts a story by writing the first chapter or section, and choosing the appropriate category, genre, and rating. Once they’re happy with their draft and choose to publish it,, other users will be able to add their own contributions. The original author can then choose the contribution they like best, and other users can then continue adding to the main story by following up that contribution. The author’s choice can be based on personal preference, or if they choose, they can base it on the biggest number of upvotes for any given contribution. The author can keep the story going indefinitely, or mark it as completed, which prevents further contributions from being added.`}</p>
+      <p>{`A user starts a story by writing the first chapter or section and choosing the appropriate category, genre, and rating. Once they’re happy with their draft and choose to publish it, other users will be able to add their own contributions. The original author can then choose the contribution they like best, and other users can then continue adding to the main story by following up that contribution. The author’s choice can be based on personal preference, or if they choose, they can base it on the highest number of upvotes for any given contribution. The author can keep the story going indefinitely, or mark it as completed, which prevents further contributions from being added.`}</p>
       <Image url={newStory} alt='Buddy View' caption='Creating a New Story' />
-      <p>{`The app included basic fundamental features such as a user registration and login system, browsing other user’s stories, reading each individual story, and adding, editing, and deleting your own.`}</p>
-
+      <p>{`The app included basic fundamental features such as a user registration and login system; browsing other user’s stories; reading each individual story; and adding, editing, and deleting your own.`}</p>
       <h4 className='centered'><a href='https://github.com/KovaKreative/GOAL'>GitHub Repo</a></h4>
     </div>
     <h3 className="section-title">Phase 1</h3>
     <div className="bordered">
-      <p>{`This web app was originally designed and developed by myself and Stanley Wong as our midterm project at Lighthouse Labs. We divided the work based on the BREAD concepts, where my primary tasks revolved around the “EAD” aspect of the app–the features that allowed the user to add, edit, and delete stories and contributions. This included the entire vertical slice of our tech stack, including the backend server, router, database queries, and the rendering and request functions on the front end.`}</p>
+      <p>{`This web app was originally designed and developed by myself and Stanley Wong as our midterm project at Lighthouse Labs. We divided the work based on the BREAD concepts, where my primary tasks revolved around the “EAD” aspect of the app – the features that allowed the user to add, edit, and delete stories and contributions. This included the entire vertical slice of our tech stack, i.e. the backend server, router, database queries, and the rendering and request functions on the front end.`}</p>
       <h3>Tech Stack</h3>
       <TechStack techStack={techStack} />
       <p>
@@ -50,22 +48,22 @@ export const content = (
     <h3 className="section-title">Writing Together</h3>
     <div className="bordered">
       <p>
-        {`The app was built to cultivate creativity for writers. I consider myself to be a very creative (kreative?) person. I love the idea of people collaborating on writing stories together. It is often said that limitations encourage creativity, and to have to follow someone else’s writing, continuing what they’ve started is a unique kind of limitation in itself.
-        Doing some research before we commenced the development process, we discovered a handful of web apps which offer a similar service. Unfortunately, a lot of them seemed largely inactive, which is unfortunate, but it would be nice to revive this tyle of a creative outlet. It would be worth considering adding some gamification elements in the future to make it more fun for the user.`}</p>
+        {`The app was built to cultivate creativity for writers. I consider myself to be a creative (kreative?) person. I love the idea of people collaborating on writing stories together. It is often said that limitations encourage creativity, and to have to follow someone else’s writing, continuing what they’ve started, is a unique kind of limitation in itself.
+        Doing some research before we commenced the development process, we discovered a handful of web apps which offer a similar service. Unfortunately, a lot of them seemed largely inactive, but it would be nice to revive this style of a creative outlet. It would be worth considering adding some gamification elements in the future to make it more fun for the user.`}</p>
     </div>
     <h3 className="section-title">Design & Planning</h3>
     <div className="bordered">
-      <p>{`During our initial brainstorming sessions, Stanley Wong and I had divided our duties. We collaborated on the basic brainstorming, but the majority of the planning was mutually exclusive. While Stanley had undertaken designing the visual layout of our app in Figma, I took on the responsibility of designing the ERD for our database. I used diagrams.net to establish all of our tables and their relationships, which made it simple and efficient for us to create our SQL schema. Along the way, there was some iterating done, such as adding supplementary bridge tables and adding or removing certain fields.`}</p>
+      <p>{`During our initial brainstorming sessions, Stanley Wong and I divided our duties. We collaborated on the basic brainstorming, but the majority of the planning was mutually exclusive. While Stanley undertook designing the visual layout of our app in Figma, I took on the responsibility of designing the ERD for our database.`}</p>
       <Image url={figma} alt='Figma Wireframe' caption='Wireframes for the various site views' />
-      <hr />
+      <p>{`I used diagrams.net to establish all of our tables and their relationships, which made it simple and efficient for us to create our SQL schema. Along the way, the process required some iterating, such as adding supplementary bridge tables and adding or removing certain fields.`}</p>
       <Image url={erd} alt='Figma Wireframe' caption='ERD for the Database' />
-      <p>{`Once I decided to rebuild my front end in Vue, I overhauled the visual layout of the app and its components, keeping certain elements similar, but having an overall simplified layout for our story browser, and implementing pagination for reading the story chapters, rather than having an indeterminately large block of text stretching out the overall page.`}
-      </p>
+      {/* <p>{`Once I decided to rebuild my front end in Vue, I overhauled the visual layout of the app and its components, keeping certain elements similar, but having an overall simplified layout for our story browser, and implementing pagination for reading the story chapters, rather than having an indeterminately large block of text stretching out the overall page.`}
+      </p> */}
     </div>
     <h3 className="section-title">Challenges</h3>
     <div className="bordered">
       <p>{`As with any project, one of the biggest challenges was the deadline. We had one week to see the project through to completion and had to be efficient with our time and to keep our app slim, with only a couple of small wishlist features that weren’t absolutely essential.
-  Another challenge this project posed was database management. Previous to it, I had worked with SQL queries a number of times, but they usually only pertained to unrelated, individual tables, and making those queries was relatively simple. In OpenBook, we have eight total tables, all interrelated in one way or another. Not only that, since we are dealing with users and performing various post queries, we needed to ensure that the users had permissions to perform the actions they did, or deny them if they didn’t. Certain edge cases resulted in our server crashing or the data not being retrieved when we needed it. We had to account for those cases within our promises on the back end. Lastly, all of this could result in some potentially messy code, so I had to make sure to keep things as efficient and DRY as possible.
+  Another challenge this project posed was database management. In the past, I had worked with SQL queries a number of times, but they usually only pertained to unrelated, individual tables, and making those queries was relatively simple. In OpenBook, we have eight total tables, all interrelated in one way or another. Not only that, since we are dealing with users and performing various post requests, we needed to ensure that the users had permissions to perform the actions they did, or deny them if they didn’t. Certain edge cases resulted in our server crashing or the data not being retrieved when we needed it. We had to account for those cases within our promises on the back end. Lastly, all of this could result in some potentially messy code, so I had to make sure to keep things as efficient and DRY as possible.
 `}
       </p>
     </div>
