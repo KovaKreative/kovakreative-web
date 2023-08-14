@@ -5,6 +5,7 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Project from './components/projects/Project';
+import NotFound from './components/notFound';
 import Footer from './components/Footer';
 
 import { content as goalContent } from './components/projects/Goal/goalContent';
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/openbook",
     element: <Project title="Open Book" content={openbookContent} />
+  },
+  {
+    path: "/*",
+    element: <NotFound />
   }
 ]);
 

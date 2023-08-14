@@ -22,11 +22,20 @@
   src: url('./assets/XoloniumRegular.otf');
 }
 
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
 body {
   margin: 0;
   background-image: url('./assets/kova-web-bkg.svg');
   width: calc(100vw - 2em);
   width: 100vw;
+  height: 100vh;
   color: v.$yellow-1;
   font-family: 'Xolonium', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

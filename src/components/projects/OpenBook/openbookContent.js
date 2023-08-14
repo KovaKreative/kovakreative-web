@@ -14,12 +14,12 @@ export const content = (
   <div className='project-content'>
     <h3 className="section-title">Overview</h3>
     <div className='bordered'>
+      <h4 className='centered'><a href='https://github.com/KovaKreative/GOAL' target="_blank"  rel="noreferrer">GitHub Repo</a></h4>
       <p>{`OpenBook is a creative writing app which allows users to create prose, poetry, or any other form of written art. What makes it unique is that it also allows users to contribute to each other’s written work, continuing a written story.`}</p>
       <Image url={overview} alt='App Overview' caption='Browse Stories Page' />
       <p>{`A user starts a story by writing the first chapter or section and choosing the appropriate category, genre, and rating. Once they’re happy with their draft and choose to publish it, other users will be able to add their own contributions. The original author can then choose the contribution they like best, and other users can then continue adding to the main story by following up that contribution. The author’s choice can be based on personal preference, or if they choose, they can base it on the highest number of upvotes for any given contribution. The author can keep the story going indefinitely, or mark it as completed, which prevents further contributions from being added.`}</p>
       <Image url={newStory} alt='Buddy View' caption='Creating a New Story' />
       <p>{`The app included basic fundamental features such as a user registration and login system; browsing other user’s stories; reading each individual story; and adding, editing, and deleting your own.`}</p>
-      <h4 className='centered'><a href='https://github.com/KovaKreative/GOAL'>GitHub Repo</a></h4>
     </div>
     <h3 className="section-title">Phase 1</h3>
     <div className="bordered">

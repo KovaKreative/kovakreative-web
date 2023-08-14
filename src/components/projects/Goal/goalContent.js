@@ -12,7 +12,7 @@ export const content = (
   <div className='project-content'>
     <h3 className="section-title">Overview</h3>
     <div className='bordered'>
-
+      <h4 className='centered'><a href='https://github.com/KovaKreative/GOAL' target="_blank"  rel="noreferrer">GitHub Repo</a></h4>
       <p>{`GOAL is an acronym that stands for Growth Organization Achievement Life. This project consists of two main features: the goal manager and the accountability buddy system.`}</p>
       <Image url={goalManager} alt='Goal Manager' caption='Goal Manager' />
       <p>{`The goal manager allows the user to establish a long-term goal and then create a list of milestones required to achieve that goal. Each milestone can then contain its own set of milestones, breaking down every big, overwhelming task into smaller, more manageable ones. Every task or milestone that’s marked as complete contributes to the overall progress of the long-term goal, so with every small accomplishment, the user can see their progress bar grow, which, hopefully, encourages them to keep going.`}</p>
@@ -36,7 +36,6 @@ export const content = (
   Our app utilized several different panels, each of which was used to display a variety of information dynamically. Having to juggle multiple states and data, we decided to use React-Redux and the Redux Toolkit to manage all of the information. This allowed us to handle our states independent of our components and to leverage them in multiple components.`}
       </p>
     </div>
-    <h4 className='centered'><a href='https://github.com/KovaKreative/GOAL'>GitHub Repo</a></h4>
     <div className='centered'>
       <h3>Video Walkthrough</h3>
       <iframe className='video' src="https://www.youtube.com/embed/Je-H89G8CmQ?origin=http://kovakreative.com" title="GOAL Video Walkthrough" allow="clipboard-write; encrypted-media; picture-in-picture" allowFullScreen={true}></iframe>
