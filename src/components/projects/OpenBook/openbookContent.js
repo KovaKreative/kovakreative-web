@@ -3,7 +3,6 @@ import Image from "../Image";
 
 import overview from '../../../assets/openbook/openBookOverview.png';
 import newStory from '../../../assets/openbook/newStory.png';
-import original from '../../../assets/openbook/openBookOriginal.png';
 import figma from '../../../assets/openbook/figma.png';
 import erd from '../../../assets/openbook/ERD.png';
 

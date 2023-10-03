@@ -26,6 +26,7 @@ export default function Skills() {
           <li>jQuery</li>
           <li>AJAX</li>
           <li>Express</li>
+          <li>Tailwind CSS</li>
           <li>Bootstrap</li>
           <li>Rails</li>
           <li>WebSockets</li>
@@ -34,6 +35,7 @@ export default function Skills() {
           <h3 className='sm'>Other</h3>
           <li>MySQL</li>
           <li>PostreSQL</li>
+          <li>MongoDB</li>
           <li>Prisma</li>
           <li>Active Record</li>
           <li>Git</li>
