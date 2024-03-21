@@ -1,5 +1,11 @@
 @use '../variables.scss' as v;
 
+.Contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .contact-form {
   min-height: 20em;
   display: flex;
@@ -18,7 +24,8 @@
 
 .submitted {
   display: flex;
-  min-height: 20em;
+  font-size: xx-large;
+  min-height: 20rem;
   justify-content: center;
   align-items: center;
   text-align: center;

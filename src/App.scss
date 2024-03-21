@@ -1,17 +1,113 @@
 @use './variables.scss' as v;
 
 .App {
+  width: max(1024px, 60vw);
+  margin: auto;
+  // margin-top: 1rem;
+  // margin-bottom: 3rem;
+  font-size: 18px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    // padding: 1em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0px;
+  }
+
+  nav {
+    display: flex;
+    flex-shrink: 1;
+    margin-left: 2em;
+
+    div {
+      justify-content: flex-end;
+      // align-items: flex-start;
+      gap: 0.5rem;
+      display: flex;
+      flex: 1;
+
+      .nav-item {
+        font-size: 18px;
+        padding: 0.5em 2em;
+        margin-bottom: 1em;
+        border-radius: 0em 0em 1em 1em;
+        border: none;
+        // margin-top: auto;
+        color: v.$yellow-1;
+        background-color: v.$violet-2;
+        transition: margin 0.1s ease-out, padding 0.1s ease-out, background-color 0.1s linear, color 0.1s linear, color 0.1s linear, color 0.1s linear;
+        width: 20%;
+      }
+
+      .nav-item:hover {
+        cursor: pointer;
+        color: adjust-color($color: v.$yellow-1, $lightness: 10%);
+        background-color: v.$violet-1;
+        padding-top: 0.75em;
+        margin-bottom: 0.75em;
+      }
+
+      .nav-item.selected {
+        color: adjust-color($color: v.$yellow-1, $lightness: 10%);
+        background-color: v.$violet-1;
+        padding-top: 1em;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+      }
+    }
+
+  }
 }
 
-.section-title {
-  padding: 0.5em;
-  border-radius: 0% 1em;
-  text-align: center;
+.backdrop {
   background: #11143dbb;
   background: -moz-linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
   background: -webkit-linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
   background: linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#11143dbb', endColorstr='#2c2072bb', GradientType=1);
+  padding: 0.7em 0.7em;
+  border-radius: 0px 2em;
+  flex: 1;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 1em 1em;
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.section-title {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-radius: 0% 1em;
+  text-align: center;
+  background: #67299ebb;
+  background: -moz-linear-gradient(90deg, #67299ebb 0%, #4d29a9bb 100%);
+  background: -webkit-linear-gradient(90deg, #67299ebb 0%, #4d29a9bb 100%);
+  background: linear-gradient(90deg, #67299ebb 0%, #4d29a9bb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#67299ebb', endColorstr='#4d29a9bb', GradientType=1);
+}
+
+.section-container {
+  section {
+    width: 100%;
+  }
+}
+
+.bg-translucent {
+  background-color: v.$bg-translucent;
+}
+
+.p-1 {
+  padding: 1em;
 }
 
 .bordered {
@@ -42,6 +138,35 @@
   }
 }
 
+.Social {
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+    color: v.$yellow-1;
+  }
+
+  .social-icon {
+    height: 2em;
+  }
+
+}
+
+.social-item:hover {
+  img {
+    filter: brightness(200%) saturate(150%) hue-rotate(-40deg);
+  }
+  a {
+    color: adjust-color($color: v.$yellow-1, $lightness: 50%);
+  }
+}
+
+
 @media (min-width: 1921px) {
   .App {
     font-size: 24px;
@@ -52,6 +177,7 @@
   .App {
     padding: 0.5em;
   }
+
   .md {
     display: none;
   }

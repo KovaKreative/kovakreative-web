@@ -44,12 +44,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-main {
-  padding: 1em;
-  max-width: max(1024px, 60vw);
-  margin: auto;
-  font-size: 18px;
-}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -93,4 +88,10 @@ a:hover {
 hr {
   border-color: #b94fff;
   margin: 1em 10%;
+}
+
+.flex-around {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }

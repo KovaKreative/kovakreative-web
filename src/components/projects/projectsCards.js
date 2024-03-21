@@ -1,15 +1,21 @@
 import goalScreenshot from '../../assets/goalPreview.png';
-import geekTriviaScreenshot from '../../assets/openbook/openBookOverview.png';
+import geekTriviaScreenshot from '../../assets/geektrivia/question.png';
 import openbookScreenshot from '../../assets/openbook/openBookOverview.png';
 
 const projects = [];
 
 projects.push(
   {
-    title: 'GOAL',
-    description: 'A productivity and organization app that allows a user to establish long-term goals and break them down into digestible milestones, as well as letting the user get in touch with an accountability buddy and stay in touch via chat.',
-    screenshot: goalScreenshot,
-    url: '/goal'
+    title: 'YourBeat',
+    description: 'An up and coming social networking app that connects Music Artists, Concert Venues, Merch Vendors, and Fans. It aims to bring about a healthier and more sustainable musi industry.',
+    screenshot: geekTriviaScreenshot,
+    url: '/letterladder'
+  },
+  {
+    title: 'Letr Ladr',
+    description: 'A Web-based word game with a similar structure to Wordle, where the user has to complete a series of five words by changing only one letter in each sequential word.',
+    screenshot: geekTriviaScreenshot,
+    url: '/letterladder'
   },
   {
     title: 'Geek Trivia Quiz',
@@ -18,11 +24,11 @@ projects.push(
     url: '/geektrivia'
   },
   {
-    title: 'Open Book',
-    description: 'A web application that allows a registered user to create original stories, as well as to read and contribute to other users\' stories.',
-    screenshot: openbookScreenshot,
-    url: '/openbook'
-  }
+    title: 'GOAL',
+    description: 'A productivity and organization app that allows a user to establish long-term goals and break them down into digestible milestones, as well as letting the user get in touch with an accountability buddy and stay in touch via chat.',
+    screenshot: goalScreenshot,
+    url: '/goal'
+  },
 );
 
 

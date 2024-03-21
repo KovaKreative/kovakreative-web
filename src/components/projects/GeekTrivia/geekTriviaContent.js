@@ -1,9 +1,9 @@
 import TechStack from "../TechStack";
 import Image from "../Image";
 
-import settings from '../../../assets/openbook/openBookOverview.png';
-import quizQuestion from '../../../assets/openbook/newStory.png';
-import figma from '../../../assets/openbook/figma.png';
+import settings from '../../../assets/geektrivia/settings.png';
+import quizQuestion from '../../../assets/geektrivia/question.png';
+import figma from '../../../assets/geektrivia/figma.png';
 
 export const techStack = ['React', 'React Redux', 'Axios', 'Tailwind', 'Node', 'Express', 'PHP', 'PostreSQL', 'MySQL'];
 
@@ -11,7 +11,7 @@ export const content = (
   <div className='project-content'>
     <h3 className="section-title">Overview</h3>
     <div className='bordered'>
-      <h4 className='centered'><a href='https://github.com/KovaKreative/GOAL' target="_blank" rel="noreferrer">GitHub Repo</a></h4>
+      <h4 className='flex-around'><a href='https://trivia.kovakreative.com/' target="_blank" rel="noreferrer">Live Page</a><a href='https://github.com/KovaKreative/geek-trivia' target="_blank" rel="noreferrer">GitHub Repo</a></h4>
       <p>{`KovaKreative Geek Trivia Quiz is an app that allows a user to partake in a quiz of 10 multiple choice questions, testing their knowledge of various geeky trivia facts. The user can choose which geeky categories they’re quizzed on as long as the total number of possible questions adds up to 10 or more. At the end of the quiz, the user gets a fraction and percentage score.`}</p>
       <Image url={settings} alt='Quiz Settings' caption='Choice of categories' />
       <p>{`A user chooses their categories and the number of questions for the quiz. The number of questions has to be equal to or less than the total number of questions from all the categories. Certain questions can belong to more than one category, so the total number of questions in the end might end up being less than the sum of each individual category.`}</p>
@@ -37,14 +37,14 @@ export const content = (
     <div className="bordered">
       <p>{`As I started to think about the scope of the project, I came up with a lot of possible features that could be implemented. I went into the project with the mindset of building a small MVP with enough foresight to allow for iterative expansion of features without the need to overhaul everything. As such, I kept the initial features simple while keeping things like my database queries and front-end states robust.
       I had the general aesthetics in my head from the beginning, and wanted to keep it simple, but colourful. I created the general design on Figma, but ended up altering certain aspects of my design during the development process, such as using checkboxes instead of buttons to combine categories.`}</p>
-      <Image url={figma} alt='Figma Wireframe' caption='Wireframes for the various site views' />
+      <Image url={figma} alt='Figma Wireframes' caption='Initial design and colour scheme' />
     </div>
     <h3 className="section-title">Challenges</h3>
     <div className="bordered">
       <p>{`In order to put all the wrong answers in a single column when querying my questions, I decided to aggregate them into a string with a unique separator that I could use to then split that single string into multiple array items on the front end. I used the “STRING_AGG” function for the PostgreSQL query and the “GROUP_CONCAT” function for the MySQL query.
       At first, that seemed to work, but then I encountered another major issue. When the user selects more than one category, any questions that had shared categories ended up being queried twice, because of the joining of the categories table. This also meant that the wrong answers were being queried twice too, and when the multiple instances of the same question were eventually grouped into one, the aggregate of the wrong answers ended up combining as well, leaving my question with redundant copies of the exact same wrong answers that would then end up rendered as extra buttons on the quiz. Worse yet, because this redundancy only applied to the wrong answers, it plainly gave away what the right answer was.
-      The easiest way for me to fix this error would have been to filter out the wrong answers on the front end, and only keep one set of unique choices. What I did not like about this solution is that it only takes care of the problem at the very last step of the whole process. I wanted to nip it in the bud, so to speak, so I began to seek out how to solve this issue at the very root of the problem–the SQL query itself. After doing some research, the best and most elegant solution I came up with was to make use of a CTE (Common Table Expression), which I was unfamiliar with until now. This allowed me to first query the questions I needed from each category, combining all the duplicate questions using the “GROUP BY” function, and then joining that virtual table with the string aggregate of my wrong answers, yielding the precise result that I wanted.`}
-      </p>
+      The easiest way for me to fix this error would have been to filter out the wrong answers on the front end, and only keep one set of unique choices. What I did not like about this solution is that it only takes care of the problem at the very last step of the whole process. I wanted to nip it in the bud, so to speak, so I began to seek out how to solve this issue at the very root of the problem–the SQL query itself.
+      After doing some research, the best and most elegant solution I came up with was to make use of a CTE (Common Table Expression), which I was unfamiliar with until now. This allowed me to first query the questions I needed from each category, combining all the duplicate questions using the “GROUP BY” function, and then joining that virtual table with the string aggregate of my wrong answers, all in a single query. This yielded the precise result I wanted.`}</p>
     </div>
     <h3 className="section-title">Going Forward</h3>
     <div className="bordered">
