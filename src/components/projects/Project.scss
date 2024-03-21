@@ -5,6 +5,12 @@
     text-align: center;
     margin: rem;
   }
+
+  footer {
+    margin: 1em;
+    font-size: 32px;
+    text-align: center;
+  }
 }
 
 .tech-stack {
@@ -77,10 +83,4 @@ h4.caption {
 .bullet {
   margin-left: 1em;
   list-style: disc;
-}
-
-footer {
-  margin: 1em;
-  font-size: 32px;
-  text-align: center;
 }
