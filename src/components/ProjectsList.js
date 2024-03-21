@@ -12,14 +12,14 @@ export default function ProjectsList() {
 
   const projectCards = projects.map((p, i) => {
     return (
-      <div className='project-card bordered' key={i}>
+      <div className='project-card' key={i}>
         <h3>{p.title}</h3>
         <img className='image' src={p.screenshot} alt={p.title} />
         <p className='project-card-description'>{p.description}</p>
-        {p.url ? <Button onClick={() => {
+        <footer>{p.url ? <Button onClick={() => {
           navigate(p.url);
           window.scrollTo(0, 0);
-        }} label="Read More" /> : <footer>Details coming soon...</footer>}
+        }} label="Read More" /> : 'Details coming soon...'}</footer>
       </div>
     );
   });
