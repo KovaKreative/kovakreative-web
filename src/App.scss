@@ -4,6 +4,10 @@ body {
   height: 100vh;
 }
 
+p {
+  margin: 0px;
+}
+
 .App {
   width: max(1024px, 60vw);
   margin: auto;
@@ -70,7 +74,7 @@ body {
   background: linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#11143dbb', endColorstr='#2c2072bb', GradientType=1);
   padding: 0.7em 0.7em;
-  border-radius: 0px 2em;
+  border-radius: 0px 0px 0px 2em;
   flex: 1;
   overflow-y: hidden;
   display: flex;
@@ -128,7 +132,7 @@ body {
 }
 
 .highlight {
-  color: v.$violet-1;
+  color: v.$yellow-2;
 }
 
 .centered {

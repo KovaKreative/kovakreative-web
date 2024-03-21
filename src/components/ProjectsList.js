@@ -10,7 +10,6 @@ export default function ProjectsList() {
 
   const navigate = useNavigate();
 
-
   const projectCards = projects.map((p, i) => {
     return (
       <div className='project-media' key={i}>

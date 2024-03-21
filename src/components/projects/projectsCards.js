@@ -1,4 +1,5 @@
 import goalScreenshot from '../../assets/goalPreview.png';
+import letrLadrImage from '../../assets/geektrivia/question.png';
 import geekTriviaScreenshot from '../../assets/geektrivia/question.png';
 import openbookScreenshot from '../../assets/openbook/openBookOverview.png';
 
@@ -14,7 +15,7 @@ projects.push(
   {
     title: 'Letr Ladr',
     description: 'A Web-based word game with a similar structure to Wordle, where the user has to complete a series of five words by changing only one letter in each sequential word.',
-    screenshot: geekTriviaScreenshot,
+    screenshot: letrLadrImage,
     url: '/letterladder'
   },
   {

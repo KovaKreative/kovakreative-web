@@ -4,12 +4,11 @@ import Main from './components/Main';
 import Skills from './components/Skills';
 import ProjectsList from './components/ProjectsList';
 import Contact from './components/Contact';
-import Games from './components/Games';
 import { useState } from 'react';
 
 const sections = [
   {
-    name: "Eric Kovalevskyy",
+    name: "About",
     component: Main
   },
   {
