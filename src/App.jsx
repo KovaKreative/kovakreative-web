@@ -1,22 +1,16 @@
 import './App.scss';
 
-import Hero from './components/Hero';
-import About from './components/About';
+import Main from './components/Main';
 import Skills from './components/Skills';
 import ProjectsList from './components/ProjectsList';
 import Contact from './components/Contact';
 import Games from './components/Games';
-import Button from './components/Button';
 import { useState } from 'react';
 
 const sections = [
   {
     name: "Eric Kovalevskyy",
-    component: Hero
-  },
-  {
-    name: "About",
-    component: About
+    component: Main
   },
   {
     name: "Skills",
@@ -46,19 +40,17 @@ function App() {
 
   return (
     <div className="App">
-      <main>
-        <div className='backdrop'>
-          <div className='section-container container bordered'>
-            <section.component />
-          </div>
+      <div className='backdrop'>
+        <div className='section-container container bordered'>
+          <section.component />
         </div>
+      </div>
 
-        <nav>
-          <div>
-            {buttons}
-          </div>
-        </nav>
-      </main>
+      <nav>
+        <div>
+          {buttons}
+        </div>
+      </nav>
     </div>
   );
 }

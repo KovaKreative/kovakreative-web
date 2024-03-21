@@ -27,7 +27,11 @@ export default function Social() {
       <ul className='Social'>
         {
           socialInfo.map((s, i) => {
-            return <li className='social-item'><a href={`${s.url}`} target='_blank' rel='noreferrer'><img className='social-icon' src={s.icon} alt={`${s.label} Icon`} />&nbsp;{s.label}</a></li>;
+            return (
+              <li className='social-item' key={`social${i}`}>
+                <a href={`${s.url}`} target='_blank' rel='noreferrer'><img className='social-icon' src={s.icon} alt={`${s.label} Icon`} />&nbsp;{s.label}</a>
+              </li>
+            );
           })
         }
       </ul>

@@ -39,9 +39,9 @@ export default function Contact() {
       </div>
       {submitted
         ?
-        <div className='submitted bordered'>{submitted}</div>
+        <div className='submitted'>{submitted}</div>
         :
-        <form className='contact-form bordered' onSubmit={e => e.preventDefault()}>
+        <form className='contact-form' onSubmit={e => e.preventDefault()}>
           <div className='form-container'>
             <div>
               <label>Name</label>
