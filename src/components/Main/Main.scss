@@ -1,0 +1,49 @@
+.Main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 1em 1em;
+  }
+
+  .Title {
+    flex-shrink: 1;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  gap: 0.5em;
+  justify-content: space-around;
+  
+  p {
+    text-align: justify;
+    margin: 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Main {
+    h1 {
+      font-size: x-large;
+    }
+  }
+
+  .Tagline {
+    text-align: justify;
+  }
+
+  .container {
+    padding: 0;
+    flex-direction: column;
+  }
+
+}

@@ -9,7 +9,6 @@ import NotFound from './components/notFound';
 import Footer from './components/Footer';
 
 import { content as goalContent } from './components/projects/Goal/goalContent';
-import { content as openbookContent } from './components/projects/OpenBook/openbookContent';
 import { content as geekTriviaContent } from './components/projects/GeekTrivia/geekTriviaContent';
 
 const router = createBrowserRouter([
@@ -26,10 +25,6 @@ const router = createBrowserRouter([
     element: <Project title="Geek Trivia Quiz" content={geekTriviaContent} />
   },
   {
-    path: "/openbook",
-    element: <Project title="Open Book" content={openbookContent} />
-  },
-  {
     path: "/*",
     element: <NotFound />
   }
@@ -39,7 +34,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
-    <Footer />
+    {/* <Footer /> */}
   </React.StrictMode>
 );
 

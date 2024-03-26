@@ -1,27 +1,116 @@
 .ProjectList {
-  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-navigator {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  
+  .scroll {
+    font-weight: bold;
+    padding: 0px 0.5em;
+    cursor: pointer;
+  }
 }
 
 .project-container {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: auto;
+  flex-direction: column;
+  gap: 0.5em;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-align: 50px;
+  scroll-margin: 20%;
+  scroll-snap-type: y mandatory;
+  justify-items: center;
+  align-items: stretch;
+  height: 100%;
+  // box-shadow: inset black 0px 2px 50px;
 }
 
-.project-card {
-  margin: 0.5em;
+.project-media {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5em;
-  min-width: 15em;
-  max-width: 50%;
-  flex: 1;
+  gap: 1rem;
+  background-color: #0005;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  scroll-snap-align: start;
+  // scroll-snap-stop: always;
+
+  h3, footer {
+    flex: 1;
+  }
+
+  p {
+    flex: 2;
+    text-align: justify;
+  }
+
   img {
-    width: 90%;
+    // max-width: 90%;
+    max-height: 100px;
+    // min-height: 50px;
     aspect-ratio: 16 / 9;
     object-fit: cover;
   }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 0px;
+    flex-shrink: 1;
+  }
+
+  .link {
+    cursor: pointer;
+  }
+}
+
+.project-card-description {
+  font-size: medium;
+}
+
+@media (min-width: 1921px) {
+  .video {
+    width: 1920px;
+    height: 1080px;
+  }
+}
+
+@media (min-width: 481px) {
+  .video {
+    width: 320px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 641px) {
+  .video {
+    width: 480px;
+    height: 270px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .video {
+    width: 640px;
+    height: 360px;
+  }
+
+  // .project-container {
+  //   grid-template-columns: 1fr 1fr 1fr;
+
+  //   :nth-child(even) {
+  //     grid-column-start: 2;
+  //   }
+  // }
+
 }

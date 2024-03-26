@@ -1,17 +1,125 @@
 @use './variables.scss' as v;
 
+body {
+  height: 100vh;
+}
+
+p {
+  margin: 0px;
+}
+
 .App {
+  width: max(1024px, 60vw);
+  margin: auto;
+  font-size: 18px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  // padding: 0.5rem 0px;
+
+  // main {
+  //   flex: 1;
+  //   height: 100%;
+  //   // display: flex;
+  //   flex-direction: column;
+  // }
+
+  nav {
+    display: flex;
+    flex-shrink: 1;
+    margin-left: 4em;
+
+    div {
+      justify-content: space-between;
+      gap: 0.5rem;
+      display: flex;
+      flex: 1;
+
+      .nav-item {
+        font-size: 18px;
+        padding: 0.5em 2em;
+        margin-bottom: 1em;
+        border-radius: 0em 0em 1em 1em;
+        border: none;
+        color: v.$yellow-1;
+        background-color: v.$violet-2;
+        transition: margin 0.1s ease-out, padding 0.1s ease-out, background-color 0.1s linear, color 0.1s linear, color 0.1s linear, color 0.1s linear;
+        flex: 1;
+      }
+
+      .nav-item:hover {
+        cursor: pointer;
+        color: adjust-color($color: v.$yellow-1, $lightness: 10%);
+        background-color: v.$violet-1;
+        padding-top: 0.75em;
+        margin-bottom: 0.75em;
+      }
+
+      .nav-item.selected {
+        color: adjust-color($color: v.$yellow-1, $lightness: 10%);
+        background-color: v.$violet-1;
+        padding-top: 1em;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+      }
+    }
+
+  }
+}
+
+.backdrop {
+  background: #11143dbb;
+  background: -moz-linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
+  background: -webkit-linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
+  background: linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#11143dbb', endColorstr='#2c2072bb', GradientType=1);
+  padding: 0.7em 0.7em;
+  border-radius: 0px 0px 0px 2em;
+  flex: 1;
+  overflow-y: hidden;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  padding: 0px 0.5rem;
 }
 
 .section-title {
   padding: 0.5em;
   border-radius: 0% 1em;
   text-align: center;
-  background: #11143dbb;
-  background: -moz-linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
-  background: -webkit-linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
-  background: linear-gradient(45deg, #11143dbb 0%, #2c2072bb 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#11143dbb', endColorstr='#2c2072bb', GradientType=1);
+  background: #67299ebb;
+  background: -moz-linear-gradient(90deg, #67299ebb 0%, #4d29a9bb 100%);
+  background: -webkit-linear-gradient(90deg, #67299ebb 0%, #4d29a9bb 100%);
+  background: linear-gradient(90deg, #67299ebb 0%, #4d29a9bb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#67299ebb', endColorstr='#4d29a9bb', GradientType=1);
+}
+
+.spread {
+  display: flex;
+  justify-content: space-around;
+}
+
+.section-container {
+  section {
+    width: 100%;
+  }
+}
+
+.bg-translucent {
+  background-color: v.$bg-translucent;
+}
+
+.p-1 {
+  padding: 1em;
 }
 
 .bordered {
@@ -24,7 +132,7 @@
 }
 
 .highlight {
-  color: v.$violet-1;
+  color: v.$yellow-2;
 }
 
 .centered {
@@ -38,7 +146,8 @@
   border: 1px solid v.$yellow-2;
 
   img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 512px;
   }
 }
 
@@ -52,6 +161,7 @@
   .App {
     padding: 0.5em;
   }
+
   .md {
     display: none;
   }

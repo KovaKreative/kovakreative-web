@@ -1,6 +1,7 @@
 import './Contact.scss';
 
 import Button from './Button';
+import Social from './Social';
 
 import { useState } from 'react';
 
@@ -8,8 +9,8 @@ import emailjs from '@emailjs/browser';
 
 export default function Contact() {
 
-  const [submitted, setSubmit] = useState('');
-  const [contactForm, setForm] = useState({ name: '', email: '', message: ''});
+  const [submitted, setSubmit] = useState(null);
+  const [contactForm, setForm] = useState({ name: '', email: '', message: '' });
 
   const onSubmit = function() {
 
@@ -32,13 +33,15 @@ export default function Contact() {
 
   return (
     <section className='Contact'>
-      <h1 className="section-title">Contact</h1>
-      <p className='centered'>If you're in need of a developer, or just want to connect, drop me a line!</p>
+      <div>
+        <h1 className="section-title">Contact</h1>
+        <p className='centered'>If you're in need of a developer, or just want to connect, drop me a line!</p>
+      </div>
       {submitted
         ?
-        <div className='submitted bordered'>{submitted}</div>
+        <div className='submitted'>{submitted}</div>
         :
-        <form className='contact-form bordered' onSubmit={e => e.preventDefault()}>
+        <form className='contact-form' onSubmit={e => e.preventDefault()}>
           <div className='form-container'>
             <div>
               <label>Name</label>
@@ -53,6 +56,7 @@ export default function Contact() {
           <Button large={true} label='Submit' onClick={onSubmit} />
         </form>
       }
+      <Social />
     </section>
   );
 }

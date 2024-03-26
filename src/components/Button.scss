@@ -6,14 +6,13 @@
   margin: 0.1em 0.1em;
   border-radius: 0em 1em;
   border: none;
-  margin-top: auto;
   background-color: v.$yellow-1;
   color: v.$violet-2;
   transition: transform 0.1s ease-out, background-color 0.1s linear, color 0.1s linear;
+  cursor: pointer;
 }
 
 .Button:hover {
-  cursor: pointer;
   background-color: adjust-color($color: v.$yellow-1, $lightness: 10%);
   color: v.$violet-1;
   transform: scale(1.1);
