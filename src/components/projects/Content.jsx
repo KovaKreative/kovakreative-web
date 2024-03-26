@@ -18,6 +18,8 @@ export default function ProjectContent(props) {
                 return <a href={c.url} target="_blank" rel="noreferrer"  key={`a${i}`}>{c.text}</a>;
               case "list":
                 return <List listItems={c.list}  key={`l${i}`} />;
+              case "video":
+                return <iframe className='video' src={c.url} title={c.title} allow="clipboard-write; encrypted-media; picture-in-picture" allowFullScreen={true} key={`vid${i}`}></iframe>;
               default:
                 return <></>;
             }
