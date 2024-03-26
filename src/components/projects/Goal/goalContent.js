@@ -1,4 +1,4 @@
-import TechStack from "../TechStack";
+import List from "../List";
 import Image from "../Image";
 
 import goalManager from '../../../assets/goal/goalManager.png';
@@ -29,7 +29,7 @@ export const content = (
     </div>
     <h3 className="section-title">Tech Stack</h3>
     <div className="bordered">
-      <TechStack techStack={techStack} />
+      <List techStack={techStack} />
       <p>
         {`We chose React for the front end because its versatile structure and responsive functionality was best suited for our dashboard-like app which required real time updates and dynamically managing smaller components. For the backend, we used Express.js, which served primarily as an API to fetch and manage our extensive database elements. For the database itself, we used PosgreSQL with Prisma as our ORM. We chose Prisma as a means to keep our database querying organized and secure.
 
