@@ -8,8 +8,9 @@ import Project from './components/projects/Project';
 import NotFound from './components/notFound';
 import Footer from './components/Footer';
 
-import { content as goalContent } from './components/projects/Goal/goalContent';
-import { content as geekTriviaContent } from './components/projects/GeekTrivia/geekTriviaContent';
+import { content as goalContent } from './components/projects/content/goalContent';
+import { content as geekTriviaContent } from './components/projects/content/geekTriviaContent';
+import { content as letrLadrContent } from './components/projects/content/letrLadrContent';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/geektrivia",
     element: <Project title="Geek Trivia Quiz" content={geekTriviaContent} />
+  },
+  {
+    path: "/letrladr",
+    element: <Project title="Letr Ladr" content={letrLadrContent} />
   },
   {
     path: "/*",

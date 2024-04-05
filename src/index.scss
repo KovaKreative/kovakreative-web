@@ -50,9 +50,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ul {
+  margin: 0px;
+  li {
+    list-style-type: none;
+  }
+}
 
-li {
-  list-style-type: none;
+ol {
+  margin: 0px;
+  padding: 0px 3em;
+  li {
+    margin: 0.5em 0px;
+  }
 }
 
 h1,

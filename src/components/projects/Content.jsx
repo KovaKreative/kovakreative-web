@@ -13,11 +13,19 @@ export default function ProjectContent(props) {
               case "paragraph":
                 return <p key={`p${i}`}>{c.text}</p>;
               case "image":
-                return <Image url={c.url} alt={c.caption} caption={c.caption}  key={`img${i}`}/>;
+                return <Image url={c.url} alt={c.caption} caption={c.caption} key={`img${i}`} />;
               case "link":
-                return <a href={c.url} target="_blank" rel="noreferrer"  key={`a${i}`}>{c.text}</a>;
+                return <a href={c.url} target="_blank" rel="noreferrer" key={`a${i}`}>{c.text}</a>;
               case "list":
-                return <List listItems={c.list}  key={`l${i}`} />;
+                return <List listItems={c.list} key={`l${i}`} />;
+              case "olist":
+                return (
+                  <ol>
+                    {c.list.map((item, index) => {
+                      return <li map={`li${index}`}>{item}</li>
+                    })}
+                  </ol>
+                );
               case "video":
                 return <iframe className='video' src={c.url} title={c.title} allow="clipboard-write; encrypted-media; picture-in-picture" allowFullScreen={true} key={`vid${i}`}></iframe>;
               default:

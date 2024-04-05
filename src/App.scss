@@ -158,10 +158,6 @@ p {
 }
 
 @media (max-width: 1024px) {
-  .App {
-    padding: 0.5em;
-  }
-
   .md {
     display: none;
   }
@@ -169,9 +165,9 @@ p {
 
 @media (max-width: 480px) {
 
-  .bordered {
-    border: none;
-  }
+  // .bordered {
+  //   border: none;
+  // }
 
   .sm {
     display: none;
