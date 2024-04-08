@@ -22,6 +22,12 @@ export default function ProjectsList() {
           }} label="Read More" /> : 'Details coming soon...'}</footer>
         </figure>
         <p className='project-card-description'>{p.description}</p>
+        <div className='sm'>
+          {p.url ? <Button onClick={() => {
+            navigate(p.url);
+            window.scrollTo(0, 0);
+          }} label="Read More" /> : 'Details coming soon...'}
+        </div>
       </div>
     );
   });

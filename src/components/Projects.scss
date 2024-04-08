@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   flex: 1;
-  
+
   .scroll {
     font-weight: bold;
     padding: 0px 0.5em;
@@ -43,7 +43,8 @@
   scroll-snap-align: start;
   // scroll-snap-stop: always;
 
-  h3, footer {
+  h3,
+  footer {
     flex: 1;
   }
 
@@ -113,4 +114,18 @@
   //   }
   // }
 
+}
+
+@media (max-width: 512px) {
+  .project-media {
+    flex-direction: column;
+    footer {
+      display: none;
+    }
+
+  }
+
+  .sm {
+    display: block;
+  }
 }
