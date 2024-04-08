@@ -39,14 +39,17 @@ function App() {
 
   return (
     <div className="App">
+        <div className='mobile-navbar'>
+          {buttons}
+        </div>
       <div className='backdrop'>
         <div className='section-container container bordered'>
           <section.component />
         </div>
       </div>
 
-      <nav>
-        <div>
+      <nav className='navbar'>
+        <div className='desktop-navbar'>
           {buttons}
         </div>
       </nav>
